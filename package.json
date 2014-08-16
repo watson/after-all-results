@@ -1,7 +1,7 @@
 {
   "name": "after-all-results",
   "version": "0.0.0",
-  "description": "Like after-all, but gives you all the results",
+  "description": "Bundle results of async functions calls into one callback with all the results",
   "main": "index.js",
   "scripts": {
     "test": "node test.js"
