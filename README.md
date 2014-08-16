@@ -1,9 +1,11 @@
 # after-all-results
 
-If you have multiple async function calls that you want to run in parallel and
-collect all their results in an array, this is the module for you.
+If you have multiple async function calls that you want to run in
+parallel and collect all their results in an array, this is the module
+for you.
 
-It's like [after-all](https://github.com/sorribas/after-all) with a build in results aggregator.
+It's like [after-all](https://github.com/sorribas/after-all) with a
+build in results aggregator.
 
 [![build status](https://secure.travis-ci.org/watson/after-all-results.png)](http://travis-ci.org/watson/after-all-results)
 
@@ -31,7 +33,10 @@ var next = aar(function (err, results) {
 });
 ```
 
-The returned `next` function is essentially just a smart callback-generator. The after-all-results module will wait and not call the all-done function until all the generated callbacks have been called:
+The returned `next` function is essentially just a smart
+callback-generator. The after-all-results module will wait and not call
+the all-done function until all the generated callbacks have been
+called:
 
 ```javascript
 someAsyncFunction(next());
