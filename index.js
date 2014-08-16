@@ -3,9 +3,14 @@
 module.exports = function (done) {
   var cbCount = 0;
   var results = [];
-  var error;
+  var error, called;
+
+  process.nextTick(function () {
+    if (!called) done();
+  })
 
   return function (callback) {
+    called = true;
     var index = cbCount++;
     return function (err, result) {
       if (callback) callback.apply(null, arguments);
