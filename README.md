@@ -43,6 +43,9 @@ someAsyncFunction(next());
 anotherAsyncFunction(next());
 ```
 
+**Note:** It is important that all `next()` calls are done on the same
+tick as the inital call to `arr()`!
+
 ### Bonus: Inception mode
 
 ```javascript
