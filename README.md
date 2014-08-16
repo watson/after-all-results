@@ -44,7 +44,7 @@ anotherAsyncFunction(next());
 ```
 
 **Note:** It is important that all `next()` calls are done on the same
-tick as the inital call to `arr()`!
+tick as the inital call to `aar()`!
 
 ### Bonus: Inception mode
 
