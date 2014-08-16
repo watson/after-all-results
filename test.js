@@ -60,3 +60,12 @@ test('should call the callback even if no calls to next() have been made', funct
     t.end();
   });
 });
+
+test('should not care if one next-callback is called on the same tick', function (t) {
+  var next = aar(function (err, results) {
+    t.equal(results.length, 2);
+    t.end();
+  });
+  next()();
+  setTimeout(next(), 10);
+});

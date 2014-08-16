@@ -16,7 +16,9 @@ module.exports = function (done) {
       if (callback) callback.apply(null, arguments);
       if (err && !error) error = err;
       results[index] = result;
-      if (!--cbCount) done(error, results);
+      process.nextTick(function () {
+        if (!--cbCount) done(error, results);
+      });
     };
   };
 };
