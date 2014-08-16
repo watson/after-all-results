@@ -5,6 +5,8 @@ collect all their results in an array, this is the module for you.
 
 It's like [after-all](https://github.com/sorribas/after-all) with a build in results aggregator.
 
+[![build status](https://secure.travis-ci.org/watson/after-all-results.png)](http://travis-ci.org/watson/after-all-results)
+
 ## Installation
 
 ```
