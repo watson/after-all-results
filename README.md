@@ -20,14 +20,14 @@ npm install after-all-results
 First require the module:
 
 ```javascript
-var aar = require('after-all-results');
+var afterAll = require('after-all-results');
 ```
 
 Then initialize with a callback that should be called once all the async
 stuff is done:
 
 ```javascript
-var next = aar(function (err, results) {
+var next = afterAll(function (err, results) {
   // all done!
   console.log(results);
 });
@@ -44,12 +44,12 @@ anotherAsyncFunction(next());
 ```
 
 **Note:** It is important that all `next()` calls are done on the same
-tick as the inital call to `aar()`!
+tick as the inital call to `afterAll()`!
 
 ### Bonus: Inception mode
 
 ```javascript
-var next = aar(function (err, results) {
+var next = afterAll(function (err, results) {
   // results will be an array of `arg1` from below
   console.log('Done with everything!');
 });
