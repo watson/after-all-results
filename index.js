@@ -6,7 +6,7 @@ module.exports = function (done) {
   var error, called;
 
   process.nextTick(function () {
-    if (!called) done();
+    if (!called) done(null, results);
   })
 
   return function (callback) {

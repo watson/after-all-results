@@ -56,7 +56,7 @@ test('should handle multiple async batches', function (t) {
 
 test('should call the callback even if no calls to next() have been made', function (t) {
   aar(function (err, results) {
-    t.equal(results, undefined);
+    t.deepEqual(results, []);
     t.end();
   });
 });
